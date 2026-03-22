@@ -11,7 +11,7 @@ class Craken < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/corca-ai/craken-cli/releases/download/v0.1.0/craken_0.1.0_darwin_amd64.tar.gz"
-      sha256 "6c0c7112b090bba102bab263e200ea1985eca6d6bd18bf5d6e25985c06761ebe"
+      sha256 "7e0d8c7327e838701aec6b0f7eb0a407ce5ad325ed8a5acfd6597fecd632096c"
 
       define_method(:install) do
         bin.install "craken"
@@ -19,7 +19,7 @@ class Craken < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/corca-ai/craken-cli/releases/download/v0.1.0/craken_0.1.0_darwin_arm64.tar.gz"
-      sha256 "f563d9b5e3adeec1615ea8d851d8457b3f6be40e509e680368841d077e485e59"
+      sha256 "1cc317bc449a0ebefe09c44d1441c104ebe5e4408f89973546dbddc8d0fa7be0"
 
       define_method(:install) do
         bin.install "craken"
@@ -30,14 +30,14 @@ class Craken < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/corca-ai/craken-cli/releases/download/v0.1.0/craken_0.1.0_linux_amd64.tar.gz"
-      sha256 "0d3b00300ed440128a55f90325a965b93e59bddbc35f51f82bf471fdab28ebdf"
+      sha256 "6db6bf5006f9f172dc4e7930d2f7f45338c626641e23a72657563ee24517e428"
       define_method(:install) do
         bin.install "craken"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/corca-ai/craken-cli/releases/download/v0.1.0/craken_0.1.0_linux_arm64.tar.gz"
-      sha256 "e38fc3254d272802c6a7883f6b31f44d1be1683f26ed0c5271c28feabd9f4f71"
+      sha256 "c1392ca3833cfbc7f4e5e5a998075df4e0fda3efa27e18dbdbdefd60dc443d60"
       define_method(:install) do
         bin.install "craken"
       end
