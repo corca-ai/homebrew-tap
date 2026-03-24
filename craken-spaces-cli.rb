@@ -5,21 +5,21 @@
 class CrakenSpacesCli < Formula
   desc "CLI for Craken Spaces"
   homepage "https://github.com/corca-ai/craken-spaces-cli"
-  version "0.4.1"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/craken-spaces-cli/releases/download/v0.4.1/craken_0.4.1_darwin_amd64.tar.gz"
-      sha256 "8e2455c88f37474a30305862f55391615ed8aff3c8c3ae1854b61ef80f433198"
+      url "https://github.com/corca-ai/craken-spaces-cli/releases/download/v0.5.0/craken_0.5.0_darwin_amd64.tar.gz"
+      sha256 "8836166e0db8185b2bf92693fc437c5163ca487219bef6e2e4f74c6935b74679"
 
       define_method(:install) do
         bin.install "spaces"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/craken-spaces-cli/releases/download/v0.4.1/craken_0.4.1_darwin_arm64.tar.gz"
-      sha256 "6386720ba1d78e2922c1fffb5db2ec97ad259c83d4a077e2d9a51d7aa61f11ca"
+      url "https://github.com/corca-ai/craken-spaces-cli/releases/download/v0.5.0/craken_0.5.0_darwin_arm64.tar.gz"
+      sha256 "965468d8e8e50f00057eedf72930032df9d0242224962345d1f5e3079b969a22"
 
       define_method(:install) do
         bin.install "spaces"
@@ -29,15 +29,15 @@ class CrakenSpacesCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/craken-spaces-cli/releases/download/v0.4.1/craken_0.4.1_linux_amd64.tar.gz"
-      sha256 "0596d98cbd564fd2cc44f957943b7a1fbf7d0e1d551e3ba1a21a3ffc774736a5"
+      url "https://github.com/corca-ai/craken-spaces-cli/releases/download/v0.5.0/craken_0.5.0_linux_amd64.tar.gz"
+      sha256 "012d01f0f6f1b09265e715a4ab11d38a9f88d4eb9bc7466ef8c91d78e7a22729"
       define_method(:install) do
         bin.install "spaces"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/craken-spaces-cli/releases/download/v0.4.1/craken_0.4.1_linux_arm64.tar.gz"
-      sha256 "69d3a8cfedf11994d695414e3fa0915241b46a9758a59af644a2bc2317d57419"
+      url "https://github.com/corca-ai/craken-spaces-cli/releases/download/v0.5.0/craken_0.5.0_linux_arm64.tar.gz"
+      sha256 "fc9cbeab31e4539f39102a58bbdd6e45272b57e7c35caf126c99633309a4ebaa"
       define_method(:install) do
         bin.install "spaces"
       end
