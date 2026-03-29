@@ -5,21 +5,21 @@
 class Specdown < Formula
   desc "Executable specifications in Markdown"
   homepage "https://github.com/corca-ai/specdown"
-  version "0.36.1"
+  version "0.37.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/specdown/releases/download/v0.36.1/specdown_0.36.1_darwin_amd64.tar.gz"
-      sha256 "4b893a94b0aac8883ae8baae12c61420bc7c6fd5eea65512f43b40ca7452302b"
+      url "https://github.com/corca-ai/specdown/releases/download/v0.37.0/specdown_0.37.0_darwin_amd64.tar.gz"
+      sha256 "370cfed650b2e1f6f8367587f1fff84abf8111b76e083633711120e223b0e51e"
 
       define_method(:install) do
         bin.install "specdown"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/specdown/releases/download/v0.36.1/specdown_0.36.1_darwin_arm64.tar.gz"
-      sha256 "1b3e7932f697e1b42725372ca4ae5e79fb20273aefca8197581c3a1e7653aed1"
+      url "https://github.com/corca-ai/specdown/releases/download/v0.37.0/specdown_0.37.0_darwin_arm64.tar.gz"
+      sha256 "9b6d240eb6da971050a1494b31caf6a5ab0ad2492625c27a9f01e18c04c753f0"
 
       define_method(:install) do
         bin.install "specdown"
@@ -29,15 +29,15 @@ class Specdown < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/specdown/releases/download/v0.36.1/specdown_0.36.1_linux_amd64.tar.gz"
-      sha256 "1c17a080dbd899bf6e19305b9e8e9f4366063c60c45697e377636a982a8a3421"
+      url "https://github.com/corca-ai/specdown/releases/download/v0.37.0/specdown_0.37.0_linux_amd64.tar.gz"
+      sha256 "3f2dc3a1bfe05afa71fb5d51564a15ad1f424de109e1e027d592524454972623"
       define_method(:install) do
         bin.install "specdown"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/specdown/releases/download/v0.36.1/specdown_0.36.1_linux_arm64.tar.gz"
-      sha256 "c1849563aca0f999f911f04ab6752bc3fa9de82a1513c55f1e701004be5592f1"
+      url "https://github.com/corca-ai/specdown/releases/download/v0.37.0/specdown_0.37.0_linux_arm64.tar.gz"
+      sha256 "ade1804e46ee938c6f550fdfac0f9e5c3364a80b8843290c57a3d8aee5bc5e08"
       define_method(:install) do
         bin.install "specdown"
       end
