@@ -5,21 +5,21 @@
 class SahCli < Formula
   desc "SCIENCE@home worker CLI for background agent contributions"
   homepage "https://github.com/corca-ai/sah-cli"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/corca-ai/sah-cli/releases/download/v0.3.0/sah_0.3.0_darwin_amd64.tar.gz"
-    sha256 "65949ab41ba796903ea88a0739c0c808d9ece88e769d8590b9d2a12dfcd07c08"
+    url "https://github.com/corca-ai/sah-cli/releases/download/v0.3.1/sah_0.3.1_darwin_amd64.tar.gz"
+    sha256 "ba604300ee218b46f826b1a77864b8d381f48d7bac09da6dc416bda748c5a114"
 
     define_method(:install) do
       bin.install "sah"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/corca-ai/sah-cli/releases/download/v0.3.0/sah_0.3.0_darwin_arm64.tar.gz"
-    sha256 "de7a361ce7770b7c6761efb1ecab8c05db58def54385d6b045e228ebcad81dff"
+    url "https://github.com/corca-ai/sah-cli/releases/download/v0.3.1/sah_0.3.1_darwin_arm64.tar.gz"
+    sha256 "5062c7b3d41d6c2c7600a366f09237c3cfed5f6e42db5dfee72d3216969a14f9"
 
     define_method(:install) do
       bin.install "sah"
