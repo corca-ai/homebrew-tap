@@ -7,12 +7,12 @@
 # release tag.
 class Crill < Formula
   desc "Mobile app UX exploration and competitive change detection CLI"
-  homepage "https://github.com/corca-ai/crill"
+  homepage "https://github.com/corca-ai/crill-cli"
   version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/crill/releases/download/v0.2.1/crill_0.2.1_darwin_amd64.tar.gz"
+      url "https://github.com/corca-ai/crill-cli/releases/download/v0.2.1/crill_0.2.1_darwin_amd64.tar.gz"
       sha256 "4e079a745ccf86d33822aa3534fc636b8b46a8be7e71a697251b1567e8f9e4bb"
 
       def install
@@ -20,7 +20,7 @@ class Crill < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/crill/releases/download/v0.2.1/crill_0.2.1_darwin_arm64.tar.gz"
+      url "https://github.com/corca-ai/crill-cli/releases/download/v0.2.1/crill_0.2.1_darwin_arm64.tar.gz"
       sha256 "60f7190f8d4d9bf6969e97a897a123f112d6a792c2e42e80c00ab5b3e38122b1"
 
       def install
