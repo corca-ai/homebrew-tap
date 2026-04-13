@@ -5,24 +5,42 @@
 class SahCli < Formula
   desc "SCIENCE@home worker CLI for background agent contributions"
   homepage "https://github.com/corca-ai/sah-cli"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
-  depends_on :macos
 
-  if Hardware::CPU.intel?
-    url "https://github.com/corca-ai/sah-cli/releases/download/v0.5.0/sah_0.5.0_darwin_amd64.tar.gz"
-    sha256 "165b7d0f5de03aa81a4aa3e9694836c0b51258968851ccb8ec8fad1d177c1222"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/corca-ai/sah-cli/releases/download/v0.6.0/sah_0.6.0_darwin_amd64.tar.gz"
+      sha256 "25927578d77fe8757b49853118c03c4623d71ef871ef283e77ddbde1fc1c77c3"
 
-    define_method(:install) do
-      bin.install "sah"
+      define_method(:install) do
+        bin.install "sah"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/corca-ai/sah-cli/releases/download/v0.6.0/sah_0.6.0_darwin_arm64.tar.gz"
+      sha256 "15fbe752827499182191207669a1c8c12af659538ceac35be5c14aa7cb88e038"
+
+      define_method(:install) do
+        bin.install "sah"
+      end
     end
   end
-  if Hardware::CPU.arm?
-    url "https://github.com/corca-ai/sah-cli/releases/download/v0.5.0/sah_0.5.0_darwin_arm64.tar.gz"
-    sha256 "ee8a1effff9a1759f173f4942ab6e431ccfbbc50e8f7e3e2d755f2ce795f9a34"
 
-    define_method(:install) do
-      bin.install "sah"
+  on_linux do
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/corca-ai/sah-cli/releases/download/v0.6.0/sah_0.6.0_linux_amd64.tar.gz"
+      sha256 "a3f4722bee6eccac0af176ef95a62c5f75bcf89d8eb30daa5edfefa321ac01ac"
+      define_method(:install) do
+        bin.install "sah"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/corca-ai/sah-cli/releases/download/v0.6.0/sah_0.6.0_linux_arm64.tar.gz"
+      sha256 "3d36ca036e2dbb94008b82cb8b4c877de543e8a1a073759bef0f9063b413c32e"
+      define_method(:install) do
+        bin.install "sah"
+      end
     end
   end
 
