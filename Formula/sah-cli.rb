@@ -5,21 +5,21 @@
 class SahCli < Formula
   desc "SCIENCE@home worker CLI for background agent contributions"
   homepage "https://github.com/corca-ai/sah-cli"
-  version "0.8.2"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/sah-cli/releases/download/v0.8.2/sah_0.8.2_darwin_amd64.tar.gz"
-      sha256 "a16d188bdd9b9ba7e4711aa8e25d270eca2d1f896a717f5ce9611cc79d2ba951"
+      url "https://github.com/corca-ai/sah-cli/releases/download/v0.9.0/sah_0.9.0_darwin_amd64.tar.gz"
+      sha256 "4349e57bb1deb67c47041770cdff0d3e3010773f720a9e863e85fe73fae7557b"
 
       define_method(:install) do
         bin.install "sah"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/sah-cli/releases/download/v0.8.2/sah_0.8.2_darwin_arm64.tar.gz"
-      sha256 "7d769c56d9eb3973d8de44809f13d79d0767eff539085dd057b4940817c02ab1"
+      url "https://github.com/corca-ai/sah-cli/releases/download/v0.9.0/sah_0.9.0_darwin_arm64.tar.gz"
+      sha256 "ef3c5efcf5b0d031703d8419dedaa8093a07b97d520c44296d18e90ac7af3f3c"
 
       define_method(:install) do
         bin.install "sah"
@@ -29,15 +29,15 @@ class SahCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/sah-cli/releases/download/v0.8.2/sah_0.8.2_linux_amd64.tar.gz"
-      sha256 "7f4c094b6c537af4cea307c2a0f17f4ff004ca073e27de7828d6bf7ca1823cfa"
+      url "https://github.com/corca-ai/sah-cli/releases/download/v0.9.0/sah_0.9.0_linux_amd64.tar.gz"
+      sha256 "fd59d56667fa6d7c16c193bccd31d2af42f5fbfb41b953e360fe81a061701f63"
       define_method(:install) do
         bin.install "sah"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/sah-cli/releases/download/v0.8.2/sah_0.8.2_linux_arm64.tar.gz"
-      sha256 "2149ded594815959e299d82c3c6ca2242974f0169abb4f24ebf734fbbfb1b51f"
+      url "https://github.com/corca-ai/sah-cli/releases/download/v0.9.0/sah_0.9.0_linux_arm64.tar.gz"
+      sha256 "6c2398a03c6b4d69c6d365fda27db32a19977d1553b88beff2bc394b90eb6080"
       define_method(:install) do
         bin.install "sah"
       end
