@@ -7,12 +7,12 @@
 class Crill < Formula
   desc "Mobile app UX exploration and competitive change detection CLI"
   homepage "https://github.com/corca-ai/crill-cli"
-  version "0.4.0"
+  version "0.4.1"
   depends_on arch: :arm64
 
   on_macos do
-    url "https://github.com/corca-ai/crill-cli/releases/download/v0.4.0/crill_0.4.0_darwin_arm64.tar.gz"
-    sha256 "d67d3cf3b909c9d5d98f60d4d7c836349693fc8103ad7eac0947c36bad8b3a85"
+    url "https://github.com/corca-ai/crill-cli/releases/download/v0.4.1/crill_0.4.1_darwin_arm64.tar.gz"
+    sha256 "d495b21654f7cffbcd7dfd127688bac1372cae93717a84a8e69e98bfdd18ca12"
 
     def install
       bin.install "crill"
