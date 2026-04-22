@@ -7,15 +7,23 @@
 class Crill < Formula
   desc "Mobile app UX exploration and competitive change detection CLI"
   homepage "https://github.com/corca-ai/crill-cli"
-  version "0.5.1"
+  version "0.5.3"
   depends_on arch: :arm64
 
   on_macos do
-    url "https://github.com/corca-ai/crill-cli/releases/download/v0.5.1/crill_0.5.1_darwin_arm64.tar.gz"
-    sha256 "6e4ae76c2efecd63088661063b5f2404e32825f21e64e1d88263f02979ee1260"
+    url "https://github.com/corca-ai/crill-cli/releases/download/v0.5.3/crill_0.5.3_darwin_arm64.tar.gz"
+    sha256 "7363e3d6b7a6b0efea331cf736f62800e7a61c3d8f06afe737f9fc74d04cc4a8"
 
     def install
-      bin.install "crill"
+      libexec.install Dir["*"]
+      bin.install_symlink libexec/"crill"
+    end
+
+    def post_install
+      # Best-effort warm-up so the first operator launch after install or
+      # upgrade does not also pay the cold-start bundle load cost. Keep the
+      # install successful even if Gatekeeper or host policy blocks execution.
+      quiet_system libexec/"crill", "--version"
     end
   end
 
