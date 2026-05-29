@@ -5,21 +5,21 @@
 class CrakenCli < Formula
   desc "Browserless Craken product CLI"
   homepage "https://github.com/corca-ai/craken-cli"
-  version "0.2.4"
+  version "0.2.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/craken-cli/releases/download/v0.2.4/craken_0.2.4_darwin_amd64.tar.gz"
-      sha256 "132a5bfa5eeafe606a4af74022ca54c7224b681dd46ae2424fc493d1a9451312"
+      url "https://github.com/corca-ai/craken-cli/releases/download/v0.2.5/craken_0.2.5_darwin_amd64.tar.gz"
+      sha256 "33dc4b7cbf5b559a1f017cf3bda2fa7be60f56ef3b6e1171314eee11979e1bf4"
 
       define_method(:install) do
         bin.install "craken"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/craken-cli/releases/download/v0.2.4/craken_0.2.4_darwin_arm64.tar.gz"
-      sha256 "6c061bc0fe182d445914bd03cfa65fb99261992faa8cadf4d926f04236952022"
+      url "https://github.com/corca-ai/craken-cli/releases/download/v0.2.5/craken_0.2.5_darwin_arm64.tar.gz"
+      sha256 "f0ff2b781a57e270d2f488a3a8d0747497ac461c7e54eebc9ad6228612c705b4"
 
       define_method(:install) do
         bin.install "craken"
@@ -29,15 +29,15 @@ class CrakenCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/craken-cli/releases/download/v0.2.4/craken_0.2.4_linux_amd64.tar.gz"
-      sha256 "bda08569d8a03d2c14ad98d25e71d4c0a33d03d5ab15bff55a2852a780dde069"
+      url "https://github.com/corca-ai/craken-cli/releases/download/v0.2.5/craken_0.2.5_linux_amd64.tar.gz"
+      sha256 "5278e091b9cb6b761580979ad71daf3bfb27d1a21a8dc05e77863423d2bcaf44"
       define_method(:install) do
         bin.install "craken"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/craken-cli/releases/download/v0.2.4/craken_0.2.4_linux_arm64.tar.gz"
-      sha256 "c23c6ba715d7b73e4900d585198bbd37bab37ed24e3d211bb9e027d92a123953"
+      url "https://github.com/corca-ai/craken-cli/releases/download/v0.2.5/craken_0.2.5_linux_arm64.tar.gz"
+      sha256 "12aa0267599891504925fa73e861da44a7edd4c5e6f02f5b986331986bb7aac5"
       define_method(:install) do
         bin.install "craken"
       end
