@@ -5,21 +5,21 @@
 class Awiki < Formula
   desc "Explore and maintain flat-file Markdown wikis"
   homepage "https://github.com/corca-ai/awiki"
-  version "0.1.4"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.1.4/awiki_0.1.4_darwin_amd64.tar.gz"
-      sha256 "4bef5bc0d1940c77252b10415123f8a488b051e52127da2d32e6ade460d68008"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.2.0/awiki_0.2.0_darwin_amd64.tar.gz"
+      sha256 "8690973898264440ed4af686504bcf2b9e34a71065c132a251debe504a2af825"
 
       define_method(:install) do
         bin.install "awiki"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.1.4/awiki_0.1.4_darwin_arm64.tar.gz"
-      sha256 "d90b561afda921e5061985822383e7d6160e30abe246332135192efafc743420"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.2.0/awiki_0.2.0_darwin_arm64.tar.gz"
+      sha256 "328229491c92166587d392c32a0cb74515e8993b97af70b764d9454f602e4cd9"
 
       define_method(:install) do
         bin.install "awiki"
@@ -29,15 +29,15 @@ class Awiki < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.1.4/awiki_0.1.4_linux_amd64.tar.gz"
-      sha256 "5f7615c939eef910daa6f59e6d2d2e8517cd899ce90cda9d05115cdacfd47f33"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.2.0/awiki_0.2.0_linux_amd64.tar.gz"
+      sha256 "be00a024248f8e753f5ecef088b117533a917c5273191068413dfb4999b477a8"
       define_method(:install) do
         bin.install "awiki"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.1.4/awiki_0.1.4_linux_arm64.tar.gz"
-      sha256 "bbdfc7d933d17e06fac4800e6c84612218830d6d3140d347d1e4cd1d75e3276b"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.2.0/awiki_0.2.0_linux_arm64.tar.gz"
+      sha256 "70bb0e910e38c4eb8987175cd50de32091bb9b7141d1b073b0525207a2a7d810"
       define_method(:install) do
         bin.install "awiki"
       end
