@@ -1,25 +1,25 @@
 class Awiki < Formula
   desc "CLI for exploring and maintaining flat-file Markdown wikis"
   homepage "https://github.com/corca-ai/awiki"
-  version "0.4.1"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.4.1/awiki-aarch64-apple-darwin.tar.xz"
-      sha256 "40ecc0a691b4c2d4ef1c5e219b94ea842abf666972d042742ab7dd402672649e"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.5.0/awiki-aarch64-apple-darwin.tar.xz"
+      sha256 "8d2ad4bbb49c390ada2b2a1c882c4fd42475d1d242ee8d2f29ed47c33e7d6fa7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.4.1/awiki-x86_64-apple-darwin.tar.xz"
-      sha256 "b282272c92891996b8fcf7f1d475aa5f74dbc946de7b81377d0569812af324c6"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.5.0/awiki-x86_64-apple-darwin.tar.xz"
+      sha256 "0e3f4a07291d6691667a07f79c889cf675178c5a01bd2bbc6fde3de9cf1e3a86"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.4.1/awiki-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "92c9de1b545d63f918ee807979725264cc35bdf1c699f5ceff7ed1e8dcabb351"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.5.0/awiki-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "bace1519f8afafb4172a28dc193d702390cab2f3263a2dc7d0b70cfcd63cc521"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.4.1/awiki-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4edeab90276918dd2143aca942a9d87789e029b5a19c0d35d51338ad3f25d4a1"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.5.0/awiki-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c0b7ee22c089130c5ace0cd7201cf8c39a48afbfbc220463b03f5ba41fe8200e"
     end
   end
   license "MIT"
