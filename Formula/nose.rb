@@ -1,25 +1,25 @@
 class Nose < Formula
   desc "Detect semantic (Type-4) code clones and refactoring candidates across many languages"
   homepage "https://github.com/corca-ai/nose"
-  version "0.19.0"
+  version "0.20.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/nose/releases/download/v0.19.0/nose-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "097c7e766e9ab756a32cec715897067d1360e145074715168a653962be409981"
+      url "https://github.com/corca-ai/nose/releases/download/v0.20.0/nose-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "c737cb0e571f1a9b91020d7610443b8d3c885a552f690375315d1ce29330e6a5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/nose/releases/download/v0.19.0/nose-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "b3e63aceea637f698c5a0f62677b9ec6ff741c55031d670e24447d628fe8b5c3"
+      url "https://github.com/corca-ai/nose/releases/download/v0.20.0/nose-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "a2fd52a09dcfdb1ae84cada859d4b5a824af8e8dd93a37809ff1c61336134505"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/nose/releases/download/v0.19.0/nose-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "172a83673ce4b3a520173a6ba76a863f653822a4d170eed6711b03946851f461"
+      url "https://github.com/corca-ai/nose/releases/download/v0.20.0/nose-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d98f95398655bdcadfd849c71088361358058b660d7f702b5ac8bd12db205454"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/nose/releases/download/v0.19.0/nose-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8ae7b1000fb00b4029f9daa034f42291331486806ddeef133ec4c9ac4f2dafbd"
+      url "https://github.com/corca-ai/nose/releases/download/v0.20.0/nose-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ae28f5fdd845570c1e9d4d2b2149d25c80952bea0a5ddbe9396b28880c1f4717"
     end
   end
   license "MIT"
