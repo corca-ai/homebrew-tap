@@ -1,25 +1,25 @@
 class Nose < Formula
   desc "Detect semantic (Type-4) code clones and refactoring candidates across many languages"
   homepage "https://github.com/corca-ai/nose"
-  version "0.20.0"
+  version "0.21.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/nose/releases/download/v0.20.0/nose-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "c737cb0e571f1a9b91020d7610443b8d3c885a552f690375315d1ce29330e6a5"
+      url "https://github.com/corca-ai/nose/releases/download/v0.21.0/nose-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "f59993ed5157fbb757d992f10b601c966ab004dd52348a6e492310c21cafd891"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/nose/releases/download/v0.20.0/nose-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "a2fd52a09dcfdb1ae84cada859d4b5a824af8e8dd93a37809ff1c61336134505"
+      url "https://github.com/corca-ai/nose/releases/download/v0.21.0/nose-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "e5cb88d02ef22387d6b7e97e0dd48fadc094ba92f653d5712c4d99c624afd718"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/nose/releases/download/v0.20.0/nose-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d98f95398655bdcadfd849c71088361358058b660d7f702b5ac8bd12db205454"
+      url "https://github.com/corca-ai/nose/releases/download/v0.21.0/nose-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "fbda5adc746c9d0e6a3516236892e467227367ccad528fb3af1e3a87713e88e0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/nose/releases/download/v0.20.0/nose-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ae28f5fdd845570c1e9d4d2b2149d25c80952bea0a5ddbe9396b28880c1f4717"
+      url "https://github.com/corca-ai/nose/releases/download/v0.21.0/nose-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "49055374c37c4216d55f32ab389ed80f6cbdcf3f07f157d59880f9b005e6f5e6"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Nose < Formula
   end
 
   def install
-    bin.install "nose" if OS.mac? && Hardware::CPU.arm?
-    bin.install "nose" if OS.mac? && Hardware::CPU.intel?
-    bin.install "nose" if OS.linux? && Hardware::CPU.arm?
-    bin.install "nose" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "nose"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "nose"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "nose"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "nose"
+    end
 
     install_binary_aliases!
 
