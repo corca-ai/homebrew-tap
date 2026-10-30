@@ -1,25 +1,25 @@
 class Awiki < Formula
   desc "CLI for exploring and maintaining flat-file Markdown wikis"
   homepage "https://github.com/corca-ai/awiki"
-  version "0.5.0"
+  version "0.5.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.5.0/awiki-aarch64-apple-darwin.tar.xz"
-      sha256 "8d2ad4bbb49c390ada2b2a1c882c4fd42475d1d242ee8d2f29ed47c33e7d6fa7"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.5.1/awiki-aarch64-apple-darwin.tar.xz"
+      sha256 "babb17ed29e148d8c635f366bd0ac757664a8c2e5f6bc41395020df1326ad1f0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.5.0/awiki-x86_64-apple-darwin.tar.xz"
-      sha256 "0e3f4a07291d6691667a07f79c889cf675178c5a01bd2bbc6fde3de9cf1e3a86"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.5.1/awiki-x86_64-apple-darwin.tar.xz"
+      sha256 "8113fbe790c14f3a0813f46bf89a5bbcdd7992b4141977bdfcb2a40af285546b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.5.0/awiki-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bace1519f8afafb4172a28dc193d702390cab2f3263a2dc7d0b70cfcd63cc521"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.5.1/awiki-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "93f6b3f2d3ff8bf0d09348d2a82af7b3b89cd69c8a9c9ea72326b37833249347"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/corca-ai/awiki/releases/download/v0.5.0/awiki-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c0b7ee22c089130c5ace0cd7201cf8c39a48afbfbc220463b03f5ba41fe8200e"
+      url "https://github.com/corca-ai/awiki/releases/download/v0.5.1/awiki-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c037e7893c8e4680a5784242ef4f837d7b5541b265f7962270332301c363628d"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Awiki < Formula
   end
 
   def install
-    bin.install "awiki" if OS.mac? && Hardware::CPU.arm?
-    bin.install "awiki" if OS.mac? && Hardware::CPU.intel?
-    bin.install "awiki" if OS.linux? && Hardware::CPU.arm?
-    bin.install "awiki" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "awiki"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "awiki"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "awiki"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "awiki"
+    end
 
     install_binary_aliases!
 
